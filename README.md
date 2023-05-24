@@ -7,28 +7,12 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 * Usage
 * Interpretation
 * License
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
-* d
+
 
 ## Installation
-d
-d
-d
-d
-d
-d
-d
-d
+
+## Usage
+
+## Interpretation
+
+## License
