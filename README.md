@@ -4,7 +4,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 
 ## Table of Contents
 * [Installation](https://github.com/LiamTheronC/waymo_motion_prediction#installation)
-* Usage
+* [Usage](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
 * Interpretation
 * License
 
