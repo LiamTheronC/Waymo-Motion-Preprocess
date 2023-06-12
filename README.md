@@ -5,7 +5,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ## Table of Contents
 * [Installation](https://github.com/LiamTheronC/waymo_motion_prediction#installation)
 * [Usage](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
-* Interpretation
+* What's in the preprocessed data
 * License
 
 
@@ -13,11 +13,9 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 
 ## Usage
 
-## Interpretation
-data.keys():
-
+## What's in the preprocessed data
+The preprocessed data is a dict() with keys including:
 'scenario_id',
-
  'time_stamps',
  'current_time_index',
  'sdc_index',
