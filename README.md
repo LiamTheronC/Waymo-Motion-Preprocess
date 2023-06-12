@@ -14,8 +14,8 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ## Usage
 
 ## What's in the preprocessed data
-The preprocessed data is a ```dict()``` with keys including:
-'scenario_id',
+The preprocessed data is a ```dict()``` with ```keys``` including:
+```'scenario_id',
  'time_stamps',
  'current_time_index',
  'sdc_index',
@@ -40,6 +40,6 @@ The preprocessed data is a ```dict()``` with keys including:
  'has_preds',
  'target_indx_e',
  'road_info',
- 'graph'
+ 'graph'```
 
 ## License
