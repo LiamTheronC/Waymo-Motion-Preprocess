@@ -48,7 +48,7 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'sdc_index'`: index of the self-driving car.
  * `'objects_of_interest'`: indicates to which object(s) you might need to pay attention. Not always available.
  * `'target_indx'`: index indicating the tracks(up to 8) required to be predicted from all objects.
- * `'engage_id'`: the ids of the objects that is actually engaged. Some objects are screened out due to certain reasons.
+ * `'engage_id'`: the ids of the objects that are actually engaged. Some objects are screened out due to certain reasons.
  * `'target_indx_e'`: index indicating the required to be predicted from engaged objects.
  
   ## License
