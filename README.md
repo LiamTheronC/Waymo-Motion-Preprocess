@@ -5,6 +5,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ## Table of Contents
 * [Installation](https://github.com/LiamTheronC/waymo_motion_prediction#installation)
 * [How to use](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
+* About the original data
 * What's in the preprocessed data
 * License
 
@@ -12,6 +13,9 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ## Installation
 
 ## How to use
+
+## About the original dataset
+* The `sample distance` of the lane centerlines is approximately `0.5m`.
 
 ## What's in the preprocessed data
 The preprocessed data is a `dict()` with `keys` including:
