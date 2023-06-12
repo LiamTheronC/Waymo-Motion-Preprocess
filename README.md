@@ -17,6 +17,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 data.keys():
 
 'scenario_id',
+
  'time_stamps',
  'current_time_index',
  'sdc_index',
