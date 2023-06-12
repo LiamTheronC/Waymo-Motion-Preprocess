@@ -4,19 +4,20 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 
 ## Table of Contents
 * [Installation](https://github.com/LiamTheronC/waymo_motion_prediction#installation)
-* [Usage](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
+* [How to use](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
 * What's in the preprocessed data
 * License
 
 
 ## Installation
 
-## Usage
+## How to use
 
 ## What's in the preprocessed data
-The preprocessed data is a ```dict()``` with ```keys``` including:
-```'scenario_id',
- 'time_stamps',
+The preprocessed data is a `dict()` with `keys` including:
+
+`'scenario_id',
+ 'time_stamps,
  'current_time_index',
  'sdc_index',
  'objects_of_interest',
@@ -40,6 +41,14 @@ The preprocessed data is a ```dict()``` with ```keys``` including:
  'has_preds',
  'target_indx_e',
  'road_info',
- 'graph'```
-
-## License
+ 'graph'`
+ 
+ * `'time_stamps`: 9 seconds sampled by 10 Hz including 0, so total 91 samples.
+ * `'current_time_index'`: is 10, which indicates 1 second.
+ * `'sdc_index'`: index of the self-driving car.
+ * `'objects_of_interest'`: indicates to which object(s) you might need to pay attention. Not always available.
+ * `'target_indx'`: index indicating the tracks(up to 8) required to be predicted from all objects.
+ * `'engage_id'`: the ids of the objects that is actually engaged. Some objects are screened out due to certain reasons.
+ * `'target_indx_e'`: index indicating the required to be predicted from engaged objects.
+ 
+  ## License
