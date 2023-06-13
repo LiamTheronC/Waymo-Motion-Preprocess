@@ -132,7 +132,7 @@ data
  ```
  * `'id'`: The ids of the lanes that have dynamic state information.
  * `'stop_point_xyz'`: The stop position (x,y,z) of the lane.
- * `'time_step'`: Time steps from 0 to 91.
+ * `'time_step'`: Time steps from 0 to 90.
  * `'state'`: Contains the `dynamic state` of the lane at each time step. There are 6 kinds of state:
 
 ```
