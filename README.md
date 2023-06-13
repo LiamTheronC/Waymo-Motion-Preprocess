@@ -28,34 +28,38 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ## What's in the preprocessed data
 The preprocessed data is a `dict()` with `keys` including:
 
-`'scenario_id',
- 'time_stamps,
- 'current_time_index',
- 'sdc_index',
- 'objects_of_interest',
- 'object_ids',
- 'object_types',
- 'trajs_xyz',
- 'velocity_xy_heading',
- 'shapes',
- 'valid_masks',
- 'target_indx',
- 'target_id',
- 'target_type',
- 'orig',
- 'theta',
- 'rot',
- 'engage_id',
- 'engage_indx',
- 'feats',
- 'ctrs',
- 'gt_preds',
- 'has_preds',
- 'target_indx_e',
- 'road_info',
- 'graph'`
- 
- * `'time_stamps`: This attribute represents the temporal dimension of the dataset. It consists of `91 samples`, each sampled at a frequency of `10 Hz`, resulting in a total duration of `9 seconds`.
+```
+data
+   └──'scenario_id'
+   └──'time_stamps'
+   └──'current_time_index',
+   └──'sdc_index',
+   └──'objects_of_interest'(#),
+   └──'object_ids',
+   └──'object_types',
+   └──'trajs_xyz',
+   └──'velocity_xy_heading',
+   └──'shapes',
+   └──'valid_masks',
+   └──'target_indx',
+   └──'target_id',
+   └──'target_type',
+   └──'orig',
+   └──'theta',
+   └──'rot',
+   └──'engage_id',
+   └──'engage_indx',
+   └──'feats',
+   └──'ctrs',
+   └──'gt_preds',
+   └──'has_preds',
+   └──'target_indx_e',
+   └──'road_info',
+   └──'graph'
+  ```
+ >  \# denodes those features that may not necessarily exist.
+
+ * `'time_stamps'`: This attribute represents the temporal dimension of the dataset. It consists of `91 samples`, each sampled at a frequency of `10 Hz`, resulting in a total duration of `9 seconds`.
  * `'current_time_index'`: This index indicates the current time, with a value of `10` corresponding to the `1 second` of the scenario.
  * `'sdc_index'`:  The index indicates the self-driving car (SDC), which is considered as the centre of the scenario.
  * `'objects_of_interest'`: This attribute identifies objects that need particular attention. This information is not available for all scenarios.
@@ -77,12 +81,41 @@ The preprocessed data is a `dict()` with `keys` including:
  
  `'road_info'` is a dict() containing information regarding the map of each scenario:
  
- * `'roadLine'`: `'id', 'polyline', 'type'`
- * `'roadEdge'`: `'id', 'polyline', 'type'`
- * `'crosswalk'`: `'id', 'polygon'`
- * `'speedBump'`: `'id', 'polygon'`
- * `'driveway'`: `'id', 'polygon'`
- * `'lane'`:
+ ```
+ road_info
+    └──'roadLine'
+    └──'roadEdge'
+    └──'crosswalk'
+    └──'speedBump'
+    └──'driveway'
+    └──'lane'
+    └──'dynamic_map'
+ ```
+ * `'roadLine'`, `'roadEdge'`, `'crosswalk'`, `'speedBump'`, `'driveway'` contain features includes:
+ ```
+ ...
+    └──'id'
+    └──'polyline' or 'polygon'
+    └──'type'(#)
+ ```
+ > A driveway (also called drive in UK English) is a type of private road for local access to one or a small group of structures, and is owned and maintained by an individual or group.(From Wikipedia) 
+ 
+ 
+ * `'lane'` contains feature includes:
+ ```
+ lane
+    └──'speedlimit'
+    └──'type'
+    └──'polyline'
+    └──'interpolating'
+    └──'entryLanes'(#)
+    └──'exitLanes'(#)
+    └──'leftNeighbors'(#)
+    └──'rightNeighbors'(#)
+    └──'leftBoundaries'(#)
+    └──'rightBoundaries'(#)
+ ```
+ 
  * `'dynamic_map'`:
  
  `'graph'` is a dict() containing processed graph features.
@@ -100,6 +133,9 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'right'`, 
  * `'lane_idcs'`
  
+
+
+
  ---
  
   ## License
