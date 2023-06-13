@@ -8,7 +8,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 * [How to use](https://github.com/LiamTheronC/waymo_motion_prediction#usage)
 * [About the original data](https://github.com/LiamTheronC/waymo_motion_prediction/blob/main/README.md#about-the-original-dataset)
 * [What's in the preprocessed data](https://github.com/LiamTheronC/waymo_motion_prediction/blob/main/README.md#whats-in-the-preprocessed-data)
-* [License]()
+* [License](https://github.com/LiamTheronC/waymo_motion_prediction/blob/main/README.md#license)
 
 ---
 
@@ -64,7 +64,7 @@ data
  * `'sdc_index'`:  The index indicates the self-driving car (SDC), which is considered as the centre of the scenario.
  * `'objects_of_interest'`: This attribute identifies objects that need particular attention. This information is not available for all scenarios.
  * `'object_ids'`: Keeps the unique ID of each object in a scenario. 
- * `'object_types'`: Indicates the type of each object, which is classified as `vehicle`, `cyclist` or `pedestrain`.
+ * `'object_types'`: Indicates the type of each object, which is classified as `vehicle`, `cyclist` or `pedestrian`.
  * `'trajs_xyz'`: Captures the trajectory of each object in three-dimensional space (x, y, z) over 9 seconds.
  * `'velocity_xy_heading'`: Describes the velocity in two-dimensional space (x, y) and orientation of each object over 9 seconds.
  * `'shapes'`: Provides the physical dimensions of each object, including its length, width, and height. 
@@ -119,8 +119,8 @@ data
  * `'dynamic_map'`:
  ```
  dynamic_map
- └──
- └──
+ └──'id'
+ └──''
  └──
  └──
  └──
@@ -129,6 +129,27 @@ data
  ```
  
  `'graph'` is a dict() containing processed graph features.
+ ```
+ graph
+ └── 'ctrs'
+ └──'feats'
+ └──'num_nodes' 
+ └──'node_idcs'
+ └──'pre_pairs' 
+ └──'suc_pairs' 
+ └──'left_pairs' 
+ └──'right_pairs' 
+ └──'pre'
+ └──'suc' 
+ └──'left' 
+ └──'right'
+ └──'lane_idcs'
+ └──
+ └──
+ └──
+ └──
+ 
+ ```
  * `'ctrs'`, 
  * `'feats'`, 
  * `'num_nodes'`, 
