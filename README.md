@@ -98,7 +98,7 @@ data
     └──'polyline' or 'polygon'
     └──'type'(#)
  ```
- > A driveway (also called drive in UK English) is a type of private road for local access to one or a small group of structures, and is owned and maintained by an individual or group.(From Wikipedia) 
+ > A driveway (also called drive in UK English) is a type of private road for local access to one or a small group of structures, and is owned and maintained by an individual or group.(from Wikipedia) 
  
  
  * `'lane'` contains features including:
@@ -133,7 +133,7 @@ data
  * `'id'`: The ids of the lanes that have dynamic state information.
  * `'stop_point_xyz'`: The stop position (x,y,z) of the lane.
  * `'time_step'`: Time steps from 0 to 91.
- * `'state'`: Contains the `dynamic state` of the lane at each time step. There are 6 kinds of states:
+ * `'state'`: Contains the `dynamic state` of the lane at each time step. There are 6 kinds of state:
 
 ```
 state:
