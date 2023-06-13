@@ -51,8 +51,13 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'current_time_index'`: is 10, which indicates 1 second.
  * `'sdc_index'`: index of the self-driving car.
  * `'objects_of_interest'`: indicates to which object(s) you might need to pay attention. Not always available.
+ * `'object_ids'`: keeps the unique ID of each object in a scenario. 
+ * `'object_types'`: type of each object, be it `vehicle`, `cyclist` or `pedestrain`.
+ * `'trajs_xyz'`: trajectory (x,y,z)_t of each object in 9 seconds.
+ * `'velocity_xy_heading'`: velocity(v_x,v_y) and heading of each object in 9 seconds.
  * `'target_indx'`: index indicating the tracks(up to 8) required to be predicted from all objects.
- * `'engage_id'`: the ids of the objects that are actually engaged. Some objects are screened out due to certain reasons.
+ * `'engage_id'`: the IDs of the objects that are actually engaged. Some objects are screened out due to certain reasons.
  * `'target_indx_e'`: index indicating the required to be predicted from engaged objects.
+ * 
  
   ## License
