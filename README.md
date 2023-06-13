@@ -89,7 +89,7 @@ data
     └──'speedBump'
     └──'driveway'
     └──'lane'
-    └──'dynamic_map'
+    └──'dynamic_map'(#)
  ```
  * `'roadLine'`, `'roadEdge'`, `'crosswalk'`, `'speedBump'`, `'driveway'` contain features including:
  ```
