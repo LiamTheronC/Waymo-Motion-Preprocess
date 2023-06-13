@@ -128,6 +128,7 @@ data
  ```
  
  `'graph'` is a dict() containing processed graph features.
+ 
  ```
  graph
     └──'ctrs'
@@ -145,23 +146,16 @@ data
     └──'lane_idcs'
  
  ```
- * `'ctrs'`, 
- * `'feats'`, 
- * `'num_nodes'`, 
- * `'node_idcs'`,
- * `'pre_pairs'`, 
- * `'suc_pairs'`, 
- * `'left_pairs'`, 
- * `'right_pairs'`, 
- * `'pre'`, 
- * `'suc'`, 
- * `'left'`, 
- * `'right'`, 
- * `'lane_idcs'`
  
-
-
-
+ * `'ctrs'`: Within the centerline of a lane, each pair of adjacent points with the line connecting them is considered as a lane `segment`. The midpoint of each segment is defined as a `node`. All the nodes are stored in this `'ctrs'` attribute. 
+ * `'feats'`: Contains the direction vector of each lane segment.
+ * `'num_nodes'`, Represents the total number of nodes in the entire lane graph.
+ * `'node_idcs'`, Stores the index ranges of nodes for each lane. It helps organize and locate nodes within their respective lanes.
+ * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. The are derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
+ * `'pre'`, `'suc'`, `'left'`, `'right'`: Likewise These 4 attributes contain node pairs that indicate connectivity between lanes.
+ * `'lane_idcs'`: This attribute serves as a mapping from the index of a `node` to the index of the `lane` to which the node belongs. It provides a convenient way to associate nodes with their respective lanes.
+ > The original lane graph is computationally intensive hence the processed graph is downsampled by 10. The user could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
+ 
  ---
  
   ## License
