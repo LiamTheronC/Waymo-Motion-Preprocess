@@ -130,19 +130,19 @@ data
     └──'time_step'
     └──'state'
  ```
- * `'id'`: Contains the ids of the lanes that have dynamic state information.
+ * `'id'`: The ids of the lanes that have dynamic state information.
  * `'stop_point_xyz'`: The stop position (x,y,z) of the lane.
  * `'time_step'`: Time steps from 0 to 91.
- * `'state'`: Contains the `dynamic state` of the lane at each time step. The states includes:
+ * `'state'`: Contains the `dynamic state` of the lane at each time step. There are 6 kinds of states:
 
 ```
 state:
-    └──'LANE_STATE_ARROW_GO' 
-    └──'LANE_STATE_ARROW_STOP' 
-    └──'LANE_STATE_CAUTION'
-    └──'LANE_STATE_GO' 
-    └──'LANE_STATE_STOP' 
-    └──'LANE_STATE_UNKNOWN'
+    'LANE_STATE_ARROW_GO' 
+    'LANE_STATE_ARROW_STOP' 
+    'LANE_STATE_CAUTION'
+    'LANE_STATE_GO' 
+    'LANE_STATE_STOP' 
+    'LANE_STATE_UNKNOWN'
  ```
  
  * `'graph'` is a dict() containing processed graph features.
