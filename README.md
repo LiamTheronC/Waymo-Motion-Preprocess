@@ -116,12 +116,12 @@ data
     └──'leftBoundaries'(#)
     └──'rightBoundaries'(#)
  ```
- * `'speedlimit'`: contains speed limit of each lane in mph.
+ * `'speedlimit'`: contains speed limit of each lane in `mph`.
  * `'polyline'`: contains the centerline of each lane.
  * `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`: contains the `id` of other lanes that have connections to the current lane, in 4 different ways respectively. 
- > For more details regarding `'neighbors'` and `'boundaries'`, please refer to [waymo-open-dataset/docs/lane_neighbors_and_boundaries.md](https://github.com/waymo-research/waymo-open-dataset/blob/master/docs/lane_neighbors_and_boundaries.md)
+ > For more details regarding 'Neighbors' and 'Boundaries', please refer to [waymo-open-dataset/docs/lane_neighbors_and_boundaries.md](https://github.com/waymo-research/waymo-open-dataset/blob/master/docs/lane_neighbors_and_boundaries.md)
  
- `'dynamic_map'` contains features including:
+ * `'dynamic_map'` contains features including:
 
  ```
  dynamic_map
@@ -130,9 +130,22 @@ data
     └──'time_step'
     └──'state'
  ```
+ * `'id'`: Contains the ids of the lanes that have dynamic state information.
+ * `'stop_point_xyz'`: The stop position (x,y,z) of the lane.
+ * `'time_step'`: Time steps from 0 to 91.
+ * `'state'`: Contains the `dynamic state` of the lane at each time step. The states includes:
+
+```
+state:
+    └──'LANE_STATE_ARROW_GO' 
+    └──'LANE_STATE_ARROW_STOP' 
+    └──'LANE_STATE_CAUTION'
+    └──'LANE_STATE_GO' 
+    └──'LANE_STATE_STOP' 
+    └──'LANE_STATE_UNKNOWN'
+ ```
  
- 
- `'graph'` is a dict() containing processed graph features.
+ * `'graph'` is a dict() containing processed graph features.
  
  ```
  graph
@@ -164,5 +177,7 @@ data
  ---
  
   ## License
+  
+  The work is released under the MIT license.
   
   ---
