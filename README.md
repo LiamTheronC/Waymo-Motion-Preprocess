@@ -76,7 +76,7 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'has_preds'`: Keeps the masks of the remaining 8 seconds.
  
  
- `'road_info'` is a dict() containg information regarding the map of each scenario:
+ `'road_info'` is a dict() containing information regarding the map of each scenario:
  
  * `'roadLine'`: `'id', 'polyline', 'type'`
  * `'roadEdge'`: `'id', 'polyline', 'type'`
@@ -85,6 +85,21 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'driveway'`: `'id', 'polygon'`
  * `'lane'`:
  * `'dynamic_map'`:
+ 
+ `'graph'` is a dict() containing processed graph features.
+ * `'ctrs'`, 
+ * `'feats'`, 
+ * `'num_nodes'`, 
+ * `'node_idcs'`,
+ * `'pre_pairs'`, 
+ * `'suc_pairs'`, 
+ * `'left_pairs'`, 
+ * `'right_pairs'`, 
+ * `'pre'`, 
+ * `'suc'`, 
+ * `'left'`, 
+ * `'right'`, 
+ * `'lane_idcs'`
  
  ---
  
