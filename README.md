@@ -91,7 +91,7 @@ data
     └──'lane'
     └──'dynamic_map'
  ```
- * `'roadLine'`, `'roadEdge'`, `'crosswalk'`, `'speedBump'`, `'driveway'` contain features includes:
+ * `'roadLine'`, `'roadEdge'`, `'crosswalk'`, `'speedBump'`, `'driveway'` contain features including:
  ```
  ...
     └──'id'
@@ -101,7 +101,7 @@ data
  > A driveway (also called drive in UK English) is a type of private road for local access to one or a small group of structures, and is owned and maintained by an individual or group.(From Wikipedia) 
  
  
- * `'lane'` contains feature includes:
+ * `'lane'` contains features including:
  ```
  lane
     └──'speedlimit'
