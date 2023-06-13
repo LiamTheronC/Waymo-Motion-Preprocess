@@ -169,7 +169,7 @@ state:
  * `'feats'`: Contains the `direction vector` of each lane segment.
  * `'num_nodes'`, Represents the total number of nodes in the entire lane graph.
  * `'node_idcs'`, Stores the index ranges of nodes for each lane. It helps organize and locate nodes within their respective lanes.
- * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. The are directly derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
+ * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. They are directly derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
  * `'pre'`, `'suc'`, `'left'`, `'right'`: Likewise these 4 attributes contain node pairs that indicate connectivity between nodes.
  * `'lane_idcs'`: This attribute serves as a mapping from the index of a `node` to the index of the `lane` to which the node belongs. It provides a convenient way to associate nodes with their respective lanes.
  > The original lane graph is computationally intensive hence the processed graph is downsampled by 10. The user could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
