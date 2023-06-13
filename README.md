@@ -1,6 +1,7 @@
 # Waymo Motion Prediction - Dataset Preprocessing
 This repository provides an unofficial preprocessing of the [Waymo Open Dataset](https://waymo.com/open/) - [Motion Prediction](https://waymo.com/intl/en_us/open/data/motion/). It aims to enhance the usability and accessibility of the dataset by offering a set of preprocessing scripts and utilities. 
 
+---
 
 ## Table of Contents
 * [Installation](https://github.com/LiamTheronC/waymo_motion_prediction#installation)
@@ -9,13 +10,20 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 * What's in the preprocessed data
 * License
 
+---
 
 ## Installation
 
+---
+
 ## How to use
+
+---
 
 ## About the original dataset
 * The `sample distance` of the lane centerlines is approximately `0.5m`.
+
+---
 
 ## What's in the preprocessed data
 The preprocessed data is a `dict()` with `keys` including:
@@ -65,6 +73,12 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'feats`: Contains the combined velocity and valid mask information of each object within the first second. (local view) 
  * `'ctrs'`: Contains the position of each object at current time. (local view) 
  * `'gt_preds'`: Keeps the ground truth trajectory for the remaining 8 seconds. (global view) 
- * `'has_preds': masks of the remaining 8 seconds.
+ * `'has_preds'`: Keeps the masks of the remaining 8 seconds.
+ 
+ `'road_info'` is a dict() of the information regarding the map. 
+ 
+ ---
  
   ## License
+  
+  ---
