@@ -54,7 +54,8 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'object_ids'`: keeps the unique ID of each object in a scenario. 
  * `'object_types'`: type of each object, be it `vehicle`, `cyclist` or `pedestrain`.
  * `'trajs_xyz'`: trajectory (x,y,z)_t of each object in 9 seconds.
- * `'velocity_xy_heading'`: velocity(v_x,v_y) and heading of each object in 9 seconds.
+ * `'velocity_xy_heading'`: velocity and heading (v_x,v_y,heading) of each object in 9 seconds.
+ * `'shapes'`: the shape of each object in length, width and height.
  * `'target_indx'`: index indicating the tracks(up to 8) required to be predicted from all objects.
  * `'engage_id'`: the IDs of the objects that are actually engaged. Some objects are screened out due to certain reasons.
  * `'target_indx_e'`: index indicating the required to be predicted from engaged objects.
