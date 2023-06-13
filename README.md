@@ -117,6 +117,16 @@ data
  ```
  
  * `'dynamic_map'`:
+ ```
+ dynamic_map
+ └──
+ └──
+ └──
+ └──
+ └──
+ └──
+ 
+ ```
  
  `'graph'` is a dict() containing processed graph features.
  * `'ctrs'`, 
