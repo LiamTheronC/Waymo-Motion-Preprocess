@@ -102,6 +102,7 @@ data
  
  
  * `'lane'` contains features including:
+ 
  ```
  lane
     └──'speedlimit'
@@ -117,37 +118,31 @@ data
  ```
  
  * `'dynamic_map'`:
+ 
  ```
  dynamic_map
- └──'id'
- └──''
- └──
- └──
- └──
- └──
- 
+    └──'id'
+    └──'stop_point_xyz'
+    └──'time_step'
+    └──'state'
  ```
  
  `'graph'` is a dict() containing processed graph features.
  ```
  graph
- └── 'ctrs'
- └──'feats'
- └──'num_nodes' 
- └──'node_idcs'
- └──'pre_pairs' 
- └──'suc_pairs' 
- └──'left_pairs' 
- └──'right_pairs' 
- └──'pre'
- └──'suc' 
- └──'left' 
- └──'right'
- └──'lane_idcs'
- └──
- └──
- └──
- └──
+    └──'ctrs'
+    └──'feats'
+    └──'num_nodes' 
+    └──'node_idcs'
+    └──'pre_pairs' 
+    └──'suc_pairs' 
+    └──'left_pairs' 
+    └──'right_pairs' 
+    └──'pre'
+    └──'suc' 
+    └──'left' 
+    └──'right'
+    └──'lane_idcs'
  
  ```
  * `'ctrs'`, 
