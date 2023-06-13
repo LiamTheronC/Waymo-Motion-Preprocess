@@ -75,7 +75,15 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'gt_preds'`: Keeps the ground truth trajectory for the remaining 8 seconds. (global view) 
  * `'has_preds'`: Keeps the masks of the remaining 8 seconds.
  
- `'road_info'` is a dict() of the information regarding the map. 
+ `'road_info'` is a dict() containg information regarding the map of each scenario:
+ 
+ * `'roadLine'`: 'id', 'polyline', 'type'.
+ * `'roadEdge'`: 'id', 'polyline', 'type'
+ * `'crosswalk'`: 'id', 'polygon'
+ * `'speedBump'`: 'id', 'polygon'
+ * `'driveway'`: 'id', 'polygon'
+ * `'lane'`:
+ * `'dynamic_map'`:
  
  ---
  
