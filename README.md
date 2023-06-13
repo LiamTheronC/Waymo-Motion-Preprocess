@@ -49,18 +49,22 @@ The preprocessed data is a `dict()` with `keys` including:
  
  * `'time_stamps`: This attribute represents the temporal dimension of the dataset. It consists of `91 samples`, each sampled at a frequency of `10 Hz`, resulting in a total duration of `9 seconds`.
  * `'current_time_index'`: This index indicates the current time, with a value of `10` corresponding to the `1 second` of the scenario.
- * `'sdc_index'`:  The index indicates the `self-driving car (SDC)`, which is considered as the centre of the scenario.
- * `'objects_of_interest'`: This attribute identifies objects within the scenario that maybe need particular attention. Please note that this information may `not be available` for all scenarios.
- * `'object_ids'`: unique ID of each object in a scenario. 
- * `'object_types'`: type of each object, be it `vehicle`, `cyclist` or `pedestrain`.
- * `'trajs_xyz'`: trajectory (x,y,z)_t of each object in 9 seconds.
- * `'velocity_xy_heading'`: velocity and heading (v_x,v_y,heading) of each object in 9 seconds.
- * `'shapes'`: the shape of each object in length, width and height.
- * `'valid_masks'`:a mask indicating if the data of the object is valid at each time stamp.
- * `'target_indx'`: index indicating the tracks(up to 8) required to be predicted from all objects.
- * `'orig'`: the position of the self-driving car at the current time.
- * `'engage_id'`: the IDs of the objects that are actually engaged. Some objects are screened out due to certain reasons.
- * `'target_indx_e'`: index indicating the required to be predicted from engaged objects.
- * 
+ * `'sdc_index'`:  The index indicates the self-driving car (SDC), which is considered as the centre of the scenario.
+ * `'objects_of_interest'`: This attribute identifies objects that need particular attention. This information is not available for all scenarios.
+ * `'object_ids'`: Keeps the unique ID of each object in a scenario. 
+ * `'object_types'`: Indicates the type of each object, which is classified as `vehicle`, `cyclist` or `pedestrain`.
+ * `'trajs_xyz'`: Captures the trajectory of each object in three-dimensional space (x, y, z) over 9 seconds.
+ * `'velocity_xy_heading'`: Describes the velocity in two-dimensional space (x, y) and orientation of each object over 9 seconds.
+ * `'shapes'`: Provides the physical dimensions of each object, including its length, width, and height. 
+ * `'valid_masks'`: A binary mask that indicates the validity of object data at each timestamp. It helps identifying missing or unreliable information for specific objects at certain time points.
+ * `'target_indx'`: Specifies the indices of the tracks (up to 8) that need to be predicted from all objects in the scenario (`'object_ids'`).
+ * `'orig'`: Indicates the position of the SDC at the current time within the scenario. 
+ * `'theta'`: Indicates the moving direction of the SDC at the current time. The attributes `'orig'` and `'theta'` determin the relative positions (local view) of other objects with respect to the SDC.
+ * `'engage_id'`: Contains the IDs of the selected objects that are used for analysis. Some objects may be excluded from analysis due to specific reasons.
+ * `'target_indx_e'`: Similar to `'target_indx'`, specifies the indices of the tracks to be predicted specifically from the selected objects (`'engage_id'`).
+ * `'feats`: Contains a combination of velocity and valid mask of the object within the first 1 second. (local view) 
+ * `'ctrs'`: Contains the position of the object at current time. (local view) 
+ * `'gt_preds'`: Ground truth of the prediction, which is the trajectoy of the latter 8 seconds. (global view) 
+ * `'has_preds': masks of the latter 8 seconds.
  
   ## License
