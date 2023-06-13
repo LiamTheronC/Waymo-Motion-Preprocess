@@ -174,6 +174,8 @@ state:
  * `'lane_idcs'`: This attribute serves as a mapping from the index of a `node` to the index of the `lane` to which the node belongs. It provides a convenient way to associate nodes with their respective lanes.
  > The original lane graph is computationally intensive hence the processed graph is downsampled by 10. The user could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
  
+ ![node_pairs](https://github.com/LiamTheronC/waymo_motion_prediction/blob/main/pictures/node_pairs.png)
+ 
  ---
  
   ## License
