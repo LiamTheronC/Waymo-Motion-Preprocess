@@ -116,9 +116,13 @@ data
     └──'leftBoundaries'(#)
     └──'rightBoundaries'(#)
  ```
+ * `'speedlimit'`: contains speed limit of each lane in mph.
+ * `'polyline'`: contains the centerline of each lane.
+ * `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`: contains the `id` of other lanes that have connections to the current lane, in 4 different ways respectively. 
+ > For more details regarding `'neighbors'` and `'boundaries'`, please refer to [waymo-open-dataset/docs/lane_neighbors_and_boundaries.md](https://github.com/waymo-research/waymo-open-dataset/blob/master/docs/lane_neighbors_and_boundaries.md)
  
- * `'dynamic_map'`:
- 
+ `'dynamic_map'` contains features including:
+
  ```
  dynamic_map
     └──'id'
@@ -126,6 +130,7 @@ data
     └──'time_step'
     └──'state'
  ```
+ 
  
  `'graph'` is a dict() containing processed graph features.
  
@@ -151,7 +156,7 @@ data
  * `'feats'`: Contains the `direction vector` of each lane segment.
  * `'num_nodes'`, Represents the total number of nodes in the entire lane graph.
  * `'node_idcs'`, Stores the index ranges of nodes for each lane. It helps organize and locate nodes within their respective lanes.
- * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. The are derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
+ * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. The are directly derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
  * `'pre'`, `'suc'`, `'left'`, `'right'`: Likewise these 4 attributes contain node pairs that indicate connectivity between lanes.
  * `'lane_idcs'`: This attribute serves as a mapping from the index of a `node` to the index of the `lane` to which the node belongs. It provides a convenient way to associate nodes with their respective lanes.
  > The original lane graph is computationally intensive hence the processed graph is downsampled by 10. The user could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
