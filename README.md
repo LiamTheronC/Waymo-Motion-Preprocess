@@ -59,12 +59,12 @@ The preprocessed data is a `dict()` with `keys` including:
  * `'valid_masks'`: A binary mask that indicates the validity of object data at each timestamp. It helps identifying missing or unreliable information for specific objects at certain time points.
  * `'target_indx'`: Specifies the indices of the tracks (up to 8) that need to be predicted from all objects in the scenario (`'object_ids'`).
  * `'orig'`: Indicates the position of the SDC at the current time within the scenario. 
- * `'theta'`: Indicates the moving direction of the SDC at the current time. The attributes `'orig'` and `'theta'` determin the relative positions (local view) of other objects with respect to the SDC.
+ * `'theta'`: Represents the moving direction of the SDC at the current time. The attributes `'orig'` and `'theta'` help determin the relative positions (local view) of other objects with respect to the SDC.
  * `'engage_id'`: Contains the IDs of the selected objects that are used for analysis. Some objects may be excluded from analysis due to specific reasons.
  * `'target_indx_e'`: Similar to `'target_indx'`, specifies the indices of the tracks to be predicted specifically from the selected objects (`'engage_id'`).
- * `'feats`: Contains a combination of velocity and valid mask of the object within the first 1 second. (local view) 
- * `'ctrs'`: Contains the position of the object at current time. (local view) 
- * `'gt_preds'`: Ground truth of the prediction, which is the trajectoy of the latter 8 seconds. (global view) 
- * `'has_preds': masks of the latter 8 seconds.
+ * `'feats`: Contains the combined velocity and valid mask information of each object within the first second. (local view) 
+ * `'ctrs'`: Contains the position of each object at current time. (local view) 
+ * `'gt_preds'`: Keeps the ground truth trajectory for the remaining 8 seconds. (global view) 
+ * `'has_preds': masks of the remaining 8 seconds.
  
   ## License
