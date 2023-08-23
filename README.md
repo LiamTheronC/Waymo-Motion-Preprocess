@@ -37,6 +37,9 @@ pip install tensorflow==2.4
 pip install protobuf
 ```
 ### 2. Download dataset
+> The motion dataset is provided as sharded TFRecord format files containing protocol buffer data. The data are split into training, test, and validation sets with a split of 70% training, 15% testing and 15% validation data.
+
+download the dataset following the [official instructions](https://waymo.com/open/)
 ---
 
 ## How to use
