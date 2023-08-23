@@ -37,7 +37,6 @@ pip install protobuf
 ```
 6. Clone Waymo-Motion-Dataset-Preprocess
 ```
-cd waymo
 clone https://github.com/LiamTheronC/Waymo-Motion-Preprocess.git
 ```
 ### 2. Download dataset
