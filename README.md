@@ -13,7 +13,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ---
 
 ## Get started
-### 1.Installation
+### 1. Installation
 > A step-by-step installation guide. Recommend Ubuntu 20.04 or higher version 
 1. Create a conda virtual environment and activate it.
 ```
@@ -36,7 +36,7 @@ pip install tensorflow==2.4
 ```
 pip install protobuf
 ```
-### 2.Download dataset
+### 2. Download dataset
 ---
 
 ## How to use
