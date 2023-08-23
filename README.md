@@ -12,7 +12,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 
 ---
 
-## Installation
+## Get Started
 
 ---
 
