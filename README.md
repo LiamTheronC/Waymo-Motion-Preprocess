@@ -19,9 +19,13 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 conda create -n waymo python=3.8 -y
 conda activate waymo
 ```
-2. Install PyTorch following the [official instructions](https://pytorch.org/)
+2. Install PyTorch following the [official instructions](https://pytorch.org/).
 ```
 conda install pytorch==1.5.1 torchvision cudatoolkit=10.2 -c pytorch
+```
+3. Install waymo open dataset dependencies.
+```
+!pip install waymo-open-dataset-tf-2-11-0==1.6.0
 ```
 
 ---
