@@ -47,11 +47,6 @@ download the dataset from google cloud following the [official instructions](htt
 
 ---
 
-## About the original dataset
-* The `sample distance` of the lane centerlines is approximately `0.5m`.
-
----
-
 ## What's in the preprocessed data
 The preprocessed data is a `dict()` with `keys` including:
 
