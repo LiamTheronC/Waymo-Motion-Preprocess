@@ -16,6 +16,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 > A step-by-step installation guide
 1. Create a conda virtual environment and activate it.
 ```
+# recommend Ubuntu 20.04 or higher version
 conda create -n waymo python=3.8 -y
 conda activate waymo
 ```
@@ -23,9 +24,17 @@ conda activate waymo
 ```
 conda install pytorch==1.5.1 torchvision cudatoolkit=10.2 -c pytorch
 ```
-3. Install waymo open dataset dependencies.
+3. Install tensorflow following the [official instructions](https://www.tensorflow.org/install?hl=zh-cn).
+```
+pip install tensorflow==2.4
+```
+4. Install waymo open dataset dependencies according to the [reference](https://github.com/waymo-research/waymo-open-dataset).
 ```
 !pip install waymo-open-dataset-tf-2-11-0==1.6.0
+```
+5. Install Google Protocol Buffers.
+```
+pip install protobuf
 ```
 
 ---
