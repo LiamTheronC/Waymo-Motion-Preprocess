@@ -14,6 +14,10 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 
 ## Get started
 > A step-by-step installation guide
+1. Create a conda virtual environment and activate it.
+```
+x
+```
 
 ---
 
