@@ -12,8 +12,9 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ---
 
 ## Get started
+Recommend Ubuntu 20.04 or higher version.
 ### 1. Installation
-> A step-by-step installation guide. Recommend Ubuntu 20.04 or higher version 
+> A step-by-step installation guide. 
 1. Create a conda virtual environment and activate it.
 ```
 conda create -n waymo python=3.8 -y
