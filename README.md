@@ -47,7 +47,7 @@ cd Waymo-Motion-Preprocess
 mkdir dataset && cd dataset
 mkdir train val test
 ```
-download the dataset from google cloud following the [official instructions](https://waymo.com/open/).
+download the full dataset from google cloud to the directories respectively following the [official instructions](https://waymo.com/open/).
 
 ---
 
