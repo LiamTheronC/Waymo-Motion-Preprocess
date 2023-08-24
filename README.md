@@ -52,7 +52,14 @@ download the full dataset from google cloud to the directories respectively foll
 ---
 
 ## How to use
-
+1. create the directories for processed data.
+```
+cd Waymo-Motion-Preprocess
+mkdir data_processed && cd data_processed
+mkdir train val test
+```
+2. set up the comfigration.
+```
 ---
 
 ## What's in the preprocessed data
