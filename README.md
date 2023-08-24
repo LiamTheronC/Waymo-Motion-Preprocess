@@ -59,7 +59,7 @@ mkdir data_processed && cd data_processed
 mkdir train val test
 ```
 2. set up the comfigration.
-```
+
 ---
 
 ## What's in the preprocessed data
