@@ -38,7 +38,7 @@ pip install protobuf
 ```
 6. Clone Waymo-Motion-Dataset-Preprocess
 ```
-clone https://github.com/LiamTheronC/Waymo-Motion-Preprocess.git
+git clone https://github.com/LiamTheronC/Waymo-Motion-Preprocess.git
 ```
 ### 2. Download dataset
 > The motion dataset is provided as sharded TFRecord format files containing protocol buffer data. The data are split into training, test, and validation sets with a split of 70% training, 15% testing and 15% validation data.
