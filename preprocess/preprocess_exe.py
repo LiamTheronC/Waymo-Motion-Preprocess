@@ -2,11 +2,7 @@ import sys
 import os
 import numpy as np
 import torch
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-woring_dir = os.path.dirname(script_dir)
-sys.path.append(woring_dir)
-
+import argparse
 from dataLoader.data_loader import Waymo_Motion_DataLoader
 from preprocess import Waymo_Motion_Preprocess
 
@@ -24,6 +20,9 @@ def parse_args():
 def main():
 
   args = parse_args()
+
+  script_dir = os.path.dirname(os.path.abspath(__file__))
+  working_dir = os.path.dirname(script_dir)
   
   config = dict()
   config['path'] = os.path.join(working_dir, 'dataset', args.path)
@@ -39,10 +38,10 @@ def main():
                       'sdc_index', 'objects_of_interest', 'road_info']
 
   out_path = os.path.join(working_dir, 'data_processed', args.path)
-  if not os.path.exists(subdir_path):
-    os.makedirs(subdir_path)
+  if not os.path.exists(out_path):
+    os.makedirs(out_path)
     
-  train_dataset = Waymo_Motion_DataLoader(path)
+  train_dataset = Waymo_Motion_DataLoader(config['path'])
   all_files = os.listdir(working_dir)
   tfrecord_files = [f for f in all_files if '.tfrecord' in f]
   num_pt_files = len( tfrecord_files)
