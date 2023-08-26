@@ -70,7 +70,7 @@ run the execution file for train/val/test dataset.
 ```
 python preprocess_exe.py train --downsample-factor=10 --type-feats=vp
 ```
-> In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to have the graph downsampled by 10. Users could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
+> In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to have the graph downsampled by 10. Users could modify the downsample rate `--downsample-factor` accordingly.
 ---
 
 ## What's in the preprocessed data
