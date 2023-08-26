@@ -30,7 +30,7 @@ pip install tensorflow==2.4
 ```
 4. Install waymo open dataset dependencies according to the [reference](https://github.com/waymo-research/waymo-open-dataset).
 ```
-!pip install waymo-open-dataset-tf-2-11-0==1.6.0
+pip install waymo-open-dataset-tf-2-11-0==1.6.0
 ```
 5. Install Google Protocol Buffers.
 ```
