@@ -1,8 +1,4 @@
-#Get the basic states of the objects.
-import sys
-sys.path.append('/home/avt/prediction/Waymo/working/')
 import numpy as np
-
 
 def get_tracks_info(tracks: list) -> list:
     """Transform the 'tracks' into a reader-friendly format. 
