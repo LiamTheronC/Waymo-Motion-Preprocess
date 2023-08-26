@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/home/avt/prediction/Waymo/working/')
 import copy
 from utils import poly_gon_and_line
 
