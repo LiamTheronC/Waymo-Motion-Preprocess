@@ -48,6 +48,19 @@ mkdir dataset && cd dataset
 mkdir train val test
 ```
 download the full dataset from google cloud to the directories respectively following the [official instructions](https://waymo.com/open/).
+make sure the folder structure is:
+```
+Waymo-Motion-Preprocess
+├── dataset/
+    ├── train/
+    ├── val/
+    └──test/
+├── dataLoader/
+└── preprocess/
+    ├── preprocess_exe.py
+    |...
+
+```
 
 ---
 
