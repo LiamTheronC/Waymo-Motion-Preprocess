@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/home/avt/prediction/Waymo/working/')
-
 from get_obj_states import get_obj_states
 from get_obj_feats import get_obj_feats
 from get_road_info import get_road_info
