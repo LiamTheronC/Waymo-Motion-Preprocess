@@ -66,14 +66,11 @@ Waymo-Motion-Preprocess
 ---
 
 ## How to use
-1. create the directories for processed data.
+run the execution file for train/val/test dataset.
 ```
-cd Waymo-Motion-Preprocess
-mkdir data_processed && cd data_processed
-mkdir train val test
+python preprocess_exe.py train --downsample-factor=10 --type-feats=vp
 ```
-2. set up the comfigration.
-
+> In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to have the graph downsampled by 10. Users could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
 ---
 
 ## What's in the preprocessed data
@@ -223,7 +220,7 @@ state:
  * `'pre_pairs'`, `'suc_pairs'`, `'left_pairs'`, `'right_pairs'`: These 4 attributes contain lane pairs that indicate connectivity between lanes. They are directly derived from `'entryLanes'`,`'exitLanes'`,`'leftNeighbors'` and `'rightNeighbors'`.
  * `'pre'`, `'suc'`, `'left'`, `'right'`: Likewise these 4 attributes contain node pairs that indicate connectivity between nodes.
  * `'lane_idcs'`: This attribute serves as a mapping from the index of a `node` to the index of the `lane` to which the node belongs. It provides a convenient way to associate nodes with their respective lanes.
- > In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to have the graph downsampled by 10. Users could modify the downsample rate in the `preprocess_exe.py` script according to their needs.
+
  
  ![node_pairs](https://github.com/LiamTheronC/waymo_motion_prediction/blob/main/pictures/node_pairs.png)
  
