@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/home/avt/prediction/Waymo/working/')
-
 import numpy as np
 from utils import to_local, dsmp
 
