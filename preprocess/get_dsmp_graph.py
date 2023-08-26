@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/home/avt/prediction/Waymo/working/')
-
 import numpy as np
 from scipy import sparse
 import copy
