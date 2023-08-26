@@ -12,7 +12,7 @@ This repository provides an unofficial preprocessing of the [Waymo Open Dataset]
 ---
 
 ## Get started
-Recommend Ubuntu 20.04 or higher version.
+Recommended: Ubuntu 20.04 or higher.
 ### 1. Installation
 > A step-by-step installation guide. 
 1. Create a conda virtual environment and activate it.
@@ -24,7 +24,7 @@ conda activate waymo
 ```
 conda install pytorch==1.5.1 torchvision cudatoolkit=10.2 -c pytorch
 ```
-3. Install tensorflow following the [official instructions](https://www.tensorflow.org/install?hl=zh-cn).
+3. Install TensorFlow following the [official instructions](https://www.tensorflow.org/install?hl=zh-cn).
 ```
 pip install tensorflow==2.4
 ```
@@ -36,7 +36,7 @@ pip install tensorflow==2.4
 ```
 pip install protobuf
 ```
-6. Clone Waymo-Motion-Dataset-Preprocess
+6. Clone the Waymo-Motion-Dataset-Preprocess repository.
 ```
 git clone https://github.com/LiamTheronC/Waymo-Motion-Preprocess.git
 ```
@@ -47,9 +47,9 @@ cd Waymo-Motion-Preprocess
 mkdir dataset && cd dataset
 mkdir train val test
 ```
-download the full dataset from google cloud to the directories respectively following the [official instructions](https://waymo.com/open/).
+Download the full dataset from Google Cloud to the directories respectively following the [official instructions](https://waymo.com/open/).
 
-make sure the folder structure is:
+Make sure the folder structure is:
 ```
 Waymo-Motion-Preprocess
 ├── dataset/
@@ -66,18 +66,18 @@ Waymo-Motion-Preprocess
 ---
 
 ## How to use
-run the execution file for train/val/test dataset.
+Run the execution file for train/val/test dataset.
 ```
 python preprocess_exe.py train --downsample-factor=10 --type-feats=vp
 ```
-> In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to have the graph downsampled by 10. Users could modify the downsample rate `--downsample-factor` accordingly.
+> In the original lane graph, the `sample distance` of the lane centerlines is approximately `0.5m`. It's recommended to downsample the graph by a factor of 10. Users could modify the downsample rate `--downsample-factor` accordingly.
 ---
 
 ## What's in the preprocessed data
 The preprocessed data is a `dict()` with `keys` including:
 
 ```
-data
+Data
    └──'scenario_id'
    └──'time_stamps'
    └──'current_time_index',
@@ -105,7 +105,7 @@ data
    └──'road_info',
    └──'graph'
   ```
- >  \# denodes those features that may not necessarily exist.
+ >  \# denotes those features that may not necessarily exist.
 
  * `'time_stamps'`: This attribute represents the temporal dimension of the dataset. It consists of `91 samples`, each sampled at a frequency of `10 Hz`, resulting in a total duration of `9 seconds`.
  * `'current_time_index'`: This index indicates the current time, with a value of `10` corresponding to the `1 second` of the scenario.
